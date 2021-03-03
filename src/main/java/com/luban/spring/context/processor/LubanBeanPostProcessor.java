@@ -17,9 +17,9 @@ public class LubanBeanPostProcessor implements BeanPostProcessor {
         Class<?> clazz = bean.getClass();
         if("userService".equals(beanName) && "com.luban.spring.context.service.UserService".equals(clazz.getName())){
             try {
-                Field name = clazz.getDeclaredField("name");
+                Field name = clazz.getDeclaredField("beanName");
                 name.setAccessible(true);
-                name.set(bean,"lalalala");
+                name.set(bean,"userService");
             } catch (Exception e) {
                 e.printStackTrace();
             }

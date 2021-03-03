@@ -8,7 +8,7 @@ public class SpringApplication {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         UserService userService = context.getBean("userService", UserService.class);
-        System.out.println("name: " + userService.getName());
+        System.out.println("name: " + userService.getBeanName());
         userService.getMapper();
     }
 }

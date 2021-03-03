@@ -14,14 +14,14 @@ public class UserService {
     @Autowired
     LoginMapper loginMapper;
 
-    private String name;
+    private String beanName;
 
-    public String getName() {
-        return name;
+    public String getBeanName() {
+        return beanName;
     }
 
     public void getMapper() {
-        System.out.println(userMapper);
-        System.out.println(loginMapper);
+        System.out.println("111:" + userMapper);
+        System.out.println("222:" + loginMapper);
     }
 }

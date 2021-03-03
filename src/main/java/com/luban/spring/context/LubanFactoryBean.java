@@ -17,10 +17,8 @@ public class LubanFactoryBean implements FactoryBean {
     }
 
     public Object getObject() throws Exception {
-
         Object object = Proxy.newProxyInstance(this.getClass().getClassLoader(), new Class[]{mapperClass}, new InvocationHandler() {
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                System.out.println("123");
                 return null;
             }
         });
